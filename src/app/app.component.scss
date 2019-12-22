@@ -1,0 +1,104 @@
+.ui-tieredmenu {
+  width: 12.5em;
+  padding: 0.25em;
+}
+
+.ui-tieredmenu.ui-tieredmenu-dynamic {
+  position: absolute;
+}
+
+.ui-tieredmenu .ui-menu-separator {
+  border-width: 1px 0 0 0;
+}
+
+.ui-tieredmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-tieredmenu .ui-submenu-list {
+  display: none;
+  position: absolute;
+  width: 12.5em;
+  padding: 0.25em;
+}
+
+.ui-tieredmenu .ui-menuitem-link {
+  padding: 0.25em;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+
+.ui-tieredmenu .ui-menuitem-icon {
+  margin-right: 0.25em;
+  vertical-align: middle;
+}
+
+.ui-tieredmenu .ui-menuitem-text {
+  vertical-align: middle;
+}
+
+.ui-tieredmenu .ui-menuitem {
+  position: relative;
+  margin: 0.125em 0;
+}
+
+.ui-tieredmenu .ui-menuitem-link .ui-submenu-icon {
+  position: absolute;
+  margin-top: -0.5em;
+  right: 0;
+  top: 50%;
+}
+
+.ui-tieredmenu .ui-menuitem-active > .ui-submenu > .ui-submenu-list {
+  display: block;
+}
+
+body .ui-tieredmenu {
+  padding: 0;
+  background-color: #ffffff;
+  border: 1px solid #c8c8c8;
+}
+body .ui-tieredmenu .ui-submenu-list {
+  padding: 0;
+  background-color: #ffffff;
+  border: 1px solid #c8c8c8;
+  -webkit-box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.16);
+}
+body .ui-tieredmenu .ui-menuitem {
+  margin: 0;
+}
+body .ui-tieredmenu .ui-menuitem .ui-menuitem-link .ui-submenu-icon {
+  right: 0.429em;
+}
+body .ui-tieredmenu .ui-menuitem.ui-menuitem-active > .ui-menuitem-link {
+  background-color: #eaeaea;
+}
+body
+  .ui-tieredmenu
+  .ui-menuitem.ui-menuitem-active
+  > .ui-menuitem-link
+  .ui-menuitem-text {
+  color: #333333;
+}
+body
+  .ui-tieredmenu
+  .ui-menuitem.ui-menuitem-active
+  > .ui-menuitem-link
+  .ui-menuitem-icon,
+body
+  .ui-tieredmenu
+  .ui-menuitem.ui-menuitem-active
+  > .ui-menuitem-link
+  .ui-submenu-icon {
+  color: #333333;
+}
+body .ui-tieredmenu .ui-menu-separator {
+  border: 1px solid #c8c8c8;
+  border-width: 1px 0 0 0;
+}
