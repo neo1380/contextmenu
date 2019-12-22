@@ -90,4 +90,9 @@ export class AppComponent implements OnInit {
   ];
   }
 
+  itemClicked($event){
+    console.log($event);
+    console.log('---------from app component')
+  }
+
 }

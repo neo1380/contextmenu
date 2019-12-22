@@ -19,7 +19,7 @@
               <span class="ui-menuitem-text">{{child.label}}</span>
               <span class="ui-submenu-icon pi pi-fw pi-caret-right" *ngIf="child.items"></span>
           </a>
-          <icontextsubmenu class="ui-submenu" [item]="child" *ngIf="child.items" [baseZIndex]="baseZIndex" [parentActive]="listItem==activeItem" [autoZIndex]="autoZIndex"></icontextsubmenu>
+          <icontextsubmenu  (itemClicked)="menuItemClicked($event)" class="ui-submenu" [item]="child" *ngIf="child.items" [baseZIndex]="baseZIndex" [parentActive]="listItem==activeItem" [autoZIndex]="autoZIndex"></icontextsubmenu>
       </li>
   </ng-template>
 </ul>

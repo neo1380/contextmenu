@@ -1,13 +1,16 @@
-import {Component,OnDestroy,Input,Renderer2,Inject,forwardRef, ChangeDetectorRef, AfterViewInit} from '@angular/core';
+import {Component,OnDestroy,Input,Renderer2,Inject,forwardRef, ChangeDetectorRef, AfterViewInit, EventEmitter, Output} from '@angular/core';
 import {DomHandler} from '../utils/domhandler';
 import {MenuItem} from '../../icontextmenu';
 import {IContextMenu} from '../../icontextmenu/icontextmenu';
+
 
 @Component({
     selector: 'icontextsubmenu',
     templateUrl: './icontextsubmenu.component.html'
 })
 export class IContextSubMenu implements AfterViewInit, OnDestroy {
+
+    @Output() itemClicked = new EventEmitter();
 
     @Input() item: MenuItem;
     
@@ -106,8 +109,14 @@ export class IContextSubMenu implements AfterViewInit, OnDestroy {
         if (!menuitem.items && this.icontextMenu.popup) {
             this.icontextMenu.hide();
         }
+
+       this.menuItemClicked(menuitem);
     }
     
+    menuItemClicked(menuitem){
+      this.itemClicked.emit(menuitem);
+    }
+
     listClick(event: Event) {
         if (!this.rootItemClick) {
             this.activeItem = null;

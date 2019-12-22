@@ -1,4 +1,4 @@
-import {Component,ElementRef,OnDestroy,Input,Renderer2,Inject,forwardRef, ChangeDetectorRef, AfterViewInit} from '@angular/core';
+import {Component,ElementRef,OnDestroy,Input,Renderer2,Inject,forwardRef, ChangeDetectorRef, AfterViewInit,Output,EventEmitter} from '@angular/core';
 import {trigger,state,style,transition,animate,AnimationEvent} from '@angular/animations';
 import {DomHandler} from './utils/domhandler';
 import {MenuItem} from './model/icontextmenuitem';
@@ -40,6 +40,8 @@ export class IContextMenu implements OnDestroy {
     @Input() showTransitionOptions: string = '225ms ease-out';
 
     @Input() hideTransitionOptions: string = '195ms ease-in';
+
+    @Output() itemClicked = new EventEmitter();
 
     parentActive: boolean;
 
@@ -165,6 +167,10 @@ export class IContextMenu implements OnDestroy {
             this.restoreOverlayAppend();
             this.onOverlayHide();
         }
+    }
+
+    menuItemClicked($event){
+       this.itemClicked.emit($event);
     }
 
 }

@@ -41,4 +41,4 @@
 
 <button #btn type="button" (click)="menu.toggle($event)">Menu</button>
 
-<icontextmenu #menu [model]="items" [popup]="true"></icontextmenu>
+<icontextmenu #menu [model]="items" [popup]="true" (itemClicked)="itemClicked($event)"></icontextmenu>
