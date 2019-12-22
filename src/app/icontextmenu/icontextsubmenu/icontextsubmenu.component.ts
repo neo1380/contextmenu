@@ -10,7 +10,7 @@ import {IContextMenu} from '../../icontextmenu/icontextmenu';
 })
 export class IContextSubMenu implements AfterViewInit, OnDestroy {
 
-    @Output() itemClicked = new EventEmitter();
+    @Output() itemClicked = new EventEmitter<MenuItem>();
 
     @Input() item: MenuItem;
     

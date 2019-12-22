@@ -41,7 +41,7 @@ export class IContextMenu implements OnDestroy {
 
     @Input() hideTransitionOptions: string = '195ms ease-in';
 
-    @Output() itemClicked = new EventEmitter();
+    @Output() itemClicked = new EventEmitter<MenuItem>();
 
     parentActive: boolean;
 
